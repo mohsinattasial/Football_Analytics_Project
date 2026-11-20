@@ -1,28 +1,4 @@
-# Data Manipulation & Analysis
-pandas==2.2.0
-numpy==1.26.4
-
-# Data Visualization
-matplotlib==3.8.2
-seaborn==0.13.2
-
-# Jupyter Environment (For running notebooks)
-jupyter==1.0.0
-ipykernel==6.29.2
-
-# Terminal Dashboarding (For aesthetic command-line outputs)
-rich==13.7.0
-⚙️ How to Install the Libraries
-Open your terminal in VS Code (make sure you are inside the Football_Analytics_Project folder) and run this command:
-
-Bash
-pip install -r requirements.txt
-Short Breakdown of the Tools:
-
-pandas & numpy: These form the core engine for loading, cleaning, filtering, and structuring your data.
-
-matplotlib & seaborn: The best libraries for creating professional and colorful graphs (like bar charts, heatmaps, and trend lines).
-
-jupyter: Essential for running .ipynb files in your notebooks/ folder, allowing you to view data and charts step-by-step.
-
-rich: If you want to print aesthetic, color-coded tables or dashboards directly in your terminal (which looks highly professional), this library will handle that.
+pandas>=2.2,<3
+numpy>=1.26,<3
+matplotlib>=3.8,<4
+seaborn>=0.13,<1
