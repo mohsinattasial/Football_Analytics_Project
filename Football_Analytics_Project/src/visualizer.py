@@ -54,7 +54,9 @@ class FootballVisualizer:
         df_players['Event'] = df_players['Event'].fillna('')
         
         # String mein 'G' (Goal) kitni dafa aya hai, wo count karna
-        df_players['Goals'] = df_players['Event'].str.count('G')
+        # Event strings use tokens such as G12 or G45; counting every letter 'G' is inaccurate.
+        # Count goal tokens only (exclude penalty shootout markers and other text).
+        df_players['Goals'] = df_players['Event'].str.count(r'(?<![A-Za-z])G\d+(?!\d)')
         
         # Player ke hisaab se total goals sum karna aur top 10 nikalna
         top_scorers = df_players.groupby('Player Name')['Goals'].sum().sort_values(ascending=False).head(10)
